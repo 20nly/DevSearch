@@ -28,7 +28,7 @@
 <ul>
     {% for project in projectsList %}
 
-            <li>Title :{{project.title}} --- {{project.description}}</li>
+            <li>Title :< <a href="/project/{{project.id}}">{{project.title}}</a>  --- {{project.description}}</li>
 
     {% endfor %}
 
