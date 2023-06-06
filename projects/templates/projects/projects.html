@@ -26,7 +26,7 @@
 
 <h1>Projects</h1>
 <ul>
-    {% for project in projectsList %}
+    {% for project in projects %}
 
             <li>Title :< <a href="{% url 'project' project.id %}">{{project.title}}</a>  --- {{project.description}}</li>
 
