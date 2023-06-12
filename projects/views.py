@@ -7,6 +7,7 @@ from django.shortcuts import render
 from .models import Project
 from .forms import ProjectForm
 
+
 def projects(request):
     projects = Project.objects.all()
     context = {'projects': projects}
@@ -49,7 +50,7 @@ def updateProject(request, pk):
 
 def deleteProject(request, pk):
     project = Project.objects.get(id=pk)
-    if request.method =='POST':
+    if request.method == 'POST':
         project.delete()
         return redirect('projects')
     context = {'object': project}
